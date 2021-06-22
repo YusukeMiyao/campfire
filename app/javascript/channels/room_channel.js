@@ -13,7 +13,6 @@ const appRoom = consumer.subscriptions.create("RoomChannel", {
   received(data) {
     const messages = document.getElementById("messages")
     messages.insertAdjacentHTML("beforeend", data["message"])
-    console.log(data)
   },
 
   speak: function (message) {
